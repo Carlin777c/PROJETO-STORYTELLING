@@ -6,72 +6,136 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "pergunta deve ser escrita aqui",
+        enunciado: "No futuro, você terá a chance de viver em outro planeta. O que você escolhe?",
         alternativas: [
             {
-                texto: "alternativa letra A deve ser escrita aqui",
-                afirmacao: "Afirmação gerada se a pessoa escolher a letra A deve estar aqui "
+                texto: "Ir para Marte e começar uma nova vida.",
+                afirmacao: "Você se tornou um pioneiro em Marte, ajudando a construir as primeiras cidades espaciais."
             },
             {
-                texto: "alternativa letra B deve ser escrita aqui",
-                afirmacao: "Afirmação gerada se a pessoa escolher a letra B deve estar aqui "
+                texto: "Ficar na Terra e melhorar o planeta.",
+                afirmacao: "Você liderou projetos sustentáveis que salvaram milhões de vidas."
             }
         ]
     },
     {
-        enunciado: "",
+        enunciado: "Uma inteligência artificial oferece controlar sua carreira. O que você faz?",
         alternativas: [
             {
-                texto: "",
-                afirmacao: ""
+                texto: "Aceita a ajuda da IA.",
+                afirmacao: "Sua vida profissional disparou, tornando você um dos líderes mundiais no seu setor."
             },
             {
-                texto: "",
-                afirmacao: ""
+                texto: "Recusa e segue seu próprio caminho.",
+                afirmacao: "Você construiu sua carreira com esforço próprio, inspirando gerações."
             }
         ]
     },
     {
-        enunciado: "",
+        enunciado: "Você pode receber um chip que aumenta sua memória. Sua escolha?",
         alternativas: [
             {
-                texto: "",
-                afirmacao: ""
+                texto: "Aceitar o chip.",
+                afirmacao: "Você aprendeu 10 idiomas e se tornou um mestre do conhecimento."
             },
             {
-                texto: "",
-                afirmacao: ""
+                texto: "Recusar o chip.",
+                afirmacao: "Você manteve sua mente natural e valorizou cada aprendizado conquistado."
             }
         ]
     },
     {
-        enunciado: "",
+        enunciado: "O transporte quântico é liberado. Você viaja para onde?",
         alternativas: [
             {
-                texto: "",
-                afirmacao: ""
+                texto: "Conhecer todos os países do mundo.",
+                afirmacao: "Você conheceu culturas incríveis e fez amizades em todos os continentes."
             },
             {
-                texto: "",
-                afirmacao: ""
+                texto: "Viajar para o passado.",
+                afirmacao: "Você visitou grandes momentos da história e viu fatos que mudaram sua visão do mundo."
             }
         ]
     },
     {
-        enunciado: "",
+        enunciado: "Uma empresa oferece transformar você em ciborgue. Aceita?",
         alternativas: [
             {
-                texto: "",
-                afirmacao: ""
+                texto: "Sim, quero aumentar minhas habilidades.",
+                afirmacao: "Você se tornou um ser híbrido, com força e inteligência além do humano."
             },
             {
-                texto: "",
-                afirmacao: ""
+                texto: "Não, prefiro permanecer humano.",
+                afirmacao: "Você viveu intensamente, valorizando cada experiência natural."
             }
         ]
     },
+    {
+        enunciado: "A cura para todas as doenças é criada, mas exige isolamento total por 1 ano. Sua decisão?",
+        alternativas: [
+            {
+                texto: "Aceitar o isolamento.",
+                afirmacao: "Você voltou curado e ajudou a espalhar a nova tecnologia médica."
+            },
+            {
+                texto: "Recusar e continuar sua vida.",
+                afirmacao: "Você manteve sua liberdade e aprendeu a valorizar a saúde todos os dias."
+            }
+        ]
+    },
+    {
+        enunciado: "Você pode escolher uma habilidade instantânea. Qual?",
+        alternativas: [
+            {
+                texto: "Dominar qualquer instrumento musical.",
+                afirmacao: "Você emocionou multidões com músicas que marcaram gerações."
+            },
+            {
+                texto: "Ser um gênio em programação.",
+                afirmacao: "Você criou sistemas que mudaram o futuro da humanidade."
+            }
+        ]
+    },
+    {
+        enunciado: "O mundo enfrenta uma crise de energia. Qual sua ação?",
+        alternativas: [
+            {
+                texto: "Criar uma nova fonte de energia limpa.",
+                afirmacao: "Sua invenção salvou bilhões e trouxe equilíbrio ao planeta."
+            },
+            {
+                texto: "Organizar a população para reduzir consumo.",
+                afirmacao: "Você uniu pessoas e mudou hábitos para garantir um futuro sustentável."
+            }
+        ]
+    },
+    {
+        enunciado: "Você encontra um livro que prevê seu futuro. O que faz?",
+        alternativas: [
+            {
+                texto: "Ler todo o livro.",
+                afirmacao: "Você viveu preparado para cada desafio e aproveitou cada oportunidade."
+            },
+            {
+                texto: "Queimar o livro.",
+                afirmacao: "Você escolheu criar seu próprio destino sem influências externas."
+            }
+        ]
+    },
+    {
+        enunciado: "No final da sua vida, o que deseja deixar como legado?",
+        alternativas: [
+            {
+                texto: "Tecnologia e conhecimento.",
+                afirmacao: "Você deixou invenções que impulsionaram a humanidade por séculos."
+            },
+            {
+                texto: "Amor e união.",
+                afirmacao: "Sua bondade e compaixão inspiraram gerações a serem melhores."
+            }
+        ]
+    }
 ];
-
 
 let atual = 0;
 let perguntaAtual;
@@ -106,7 +170,7 @@ function respostaSelecionada(opcaoSelecionada) {
 
 function mostraResultado() {
     caixaPerguntas.textContent = "Em 2049...";
-    textoResultado.textContent = historiaFinal;
+    textoResultado.textContent = historiaFinal + "\n\nHistória criada por Carlos Henrique e Victor Hugo.";
     caixaAlternativas.textContent = "";
 }
 
